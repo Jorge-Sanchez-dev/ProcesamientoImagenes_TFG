@@ -13,8 +13,6 @@ imagenes = [
 # Crear carpeta resultados
 os.makedirs("resultados", exist_ok=True)
 
-# Archivo resumen
-with open("resultados/areas_ocupadas.txt", "w") as resumen:
 
     # Procesar cada imagen
     for nombre in imagenes:

@@ -33,10 +33,7 @@ os.makedirs("resultados", exist_ok=True)
         # Heatmap
         heatmap = cv2.applyColorMap(gris, cv2.COLORMAP_JET)
 
-        # -----------------------------
         # Crear carpeta individual
-        # -----------------------------
-
         nombre_sin_ext = nombre.replace(".jpg", "")
 
         carpeta = f"resultados/{nombre_sin_ext}"
@@ -49,10 +46,7 @@ os.makedirs("resultados", exist_ok=True)
         cv2.imwrite(f"{carpeta}/bordes.jpg", bordes)
         cv2.imwrite(f"{carpeta}/heatmap.jpg", heatmap)
 
-        # -----------------------------
         # Comparación visual
-        # -----------------------------
-
         fig, axs = plt.subplots(1,5, figsize=(20,4))
 
         axs[0].imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
